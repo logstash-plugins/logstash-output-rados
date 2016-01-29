@@ -265,7 +265,7 @@ class LogStash::Outputs::Rados < LogStash::Outputs::Base
     @file_rotation_lock.synchronize do
       @tempfile.close unless @tempfile.nil? && @tempfile.closed?
     end
-    @cluster.shutdown
+    @cluster.close
   end
 
   private

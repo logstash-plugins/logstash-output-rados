@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name            = 'logstash-output-rados'
-  s.version         = '1.0.0'
+  s.version         = '1.0.1'
   s.licenses        = ['Apache License (2.0)']
   s.summary         = "This plugin was created for store the logstash's events into  Ceph's Rados"
   s.description     = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   # Gem dependencies
   s.add_runtime_dependency "logstash-core", ">= 2.0.0.beta2", "< 3.0.0"
   s.add_runtime_dependency 'stud', '~> 0.0.22'
-  s.add_runtime_dependency 'ceph-ruby', '~> 1.1'
+  s.add_runtime_dependency 'ceph-ruby-ffi19'
   s.add_development_dependency 'logstash-devutils'
   s.add_development_dependency 'logstash-input-generator'
   s.add_development_dependency 'logstash-codec-line'
